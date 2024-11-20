@@ -4,7 +4,7 @@ object Form1: TForm1
   Caption = 'Panels Demo'
   ClientHeight = 181
   ClientWidth = 342
-  Color = clAqua
+  Color = clBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -20,12 +20,13 @@ object Form1: TForm1
     Width = 185
     Height = 41
     Caption = 'Blue Panel'
+    Color = clBlue
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentColor = True
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end

@@ -111,14 +111,10 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <Icon_MainIcon>..\D12\PanelsDemo_Icon.ico</Icon_MainIcon>
+        <Icon_MainIcon>..\Ethea_vela_multires.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <Icon_MainIcon>PanelsDemo_Icon.ico</Icon_MainIcon>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
@@ -127,7 +123,6 @@
         <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -149,11 +144,9 @@
         <BT_BuildType>Debug</BT_BuildType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
-        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -162,8 +155,12 @@
         <DCCReference Include="..\..\..\Hooks\Hooks_ExtCtrls.pas"/>
         <DCCReference Include="..\..\..\Hooks\Hooks_Forms.pas"/>
         <DCCReference Include="..\..\..\Hooks\Hooks_Buttons.pas"/>
-        <DCCReference Include="..\..\MainForm.pas">
+        <DCCReference Include="..\..\MainFormNew.pas">
             <Form>Form1</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\DResources.pas">
+            <Form>dmResources</Form>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <None Include="..\..\..\Hooks\Hooks.inc"/>
         <BuildConfiguration Include="Base">
@@ -187,35 +184,6 @@
                     <Source Name="MainSource">PanelsDemo.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\wpViewPDF_D11.bpl">WPViewPDF - PDFViewClass</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOXML_4280.bpl">InstantObjects 4 XML Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclLiscorVCL_D11.bpl">*** Liscor VCL Design Package for D11 ***</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOCore_4280.bpl">InstantObjects 4 Design-Time Package</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISVcl7_7280.bpl">Ethea InstantSolutions 7.7 Vcl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISRtl7_7280.bpl">Ethea InstantSolutions 7.7 Rtl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISOpenOffice7_7280.bpl">Ethea InstantSolutions 7.7 LibreOffice/OpenOffice Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOFireDAC_4280.bpl">InstantObjects 4 FireDAC Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOJSON_4280.bpl">InstantObjects 4 JSON Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOADO_4280.bpl">InstantObjects 4 ADO Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIODBX_4280.bpl">InstantObjects 4 dbExpress Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\DclIOIBX_4280.bpl">InstantObjects 4 IBX Design-Time Support</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISFLib7_7280.bpl">Ethea InstantSolutions 7.7 Framework Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISRtl8_5280.bpl">Ethea InstantSolutions 8.5 Rtl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISVcl8_5280.bpl">Ethea InstantSolutions 8.5 Vcl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISOpenOffice8_5280.bpl">Ethea InstantSolutions 8.5 LibreOffice/OpenOffice Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISFLib8_5280.bpl">Ethea InstantSolutions 8.5 Framework Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISReportBuilder8_5280.bpl">Ethea InstantSolutions 8.5 ReportBuilder Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclSkiaIconImageListFMX280.bpl">Ethea SkiaIconImageList  FMX components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclshlctrls280.bpl">Shell Control Property and Component Editors</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GLScene_DT.bpl">GLScene Engine</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GLScene_Cg_DT.bpl">GLScene Cg Shaders</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\GLScene_GPU_DT.bpl">GLScene GPU Computing</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISOpenOffice8_6280.bpl">Ethea InstantSolutions 8.6 LibreOffice/OpenOffice Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISRtl8_6280.bpl">Ethea InstantSolutions 8.6 Rtl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISVcl8_6280.bpl">Ethea InstantSolutions 8.6 Vcl Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISFLib8_6280.bpl">Ethea InstantSolutions 8.6 Framework Library</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\dclISReportBuilder7_7280.bpl">Ethea InstantSolutions 7.7 ReportBuilder Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>

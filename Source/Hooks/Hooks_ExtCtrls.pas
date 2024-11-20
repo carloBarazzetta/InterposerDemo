@@ -4,12 +4,10 @@ unit Hooks_ExtCtrls;
 
 interface
 
-{$IFDEF HOOKS}
 uses
   System.Classes
   , Vcl.Controls
   , Vcl.ExtCtrls;
-{$ENDIF}
 
 {$IFDEF PANEL_HOOKS}
 Type

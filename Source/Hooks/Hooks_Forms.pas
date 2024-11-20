@@ -4,12 +4,10 @@ unit Hooks_Forms;
 
 interface
 
-{$IFDEF HOOKS}
 uses
   System.Classes
   , Vcl.Controls
   , Vcl.Forms;
-{$ENDIF}
 
 {$IFDEF FORMS_HOOKS}
 Type

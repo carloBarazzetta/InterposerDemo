@@ -4,11 +4,9 @@ unit Hooks_Buttons;
 
 interface
 
-{$IFDEF HOOKS}
 uses
   Classes
   , Buttons;
-{$ENDIF}
 
 {$IFDEF BUTTONS_HOOKS}
 Type

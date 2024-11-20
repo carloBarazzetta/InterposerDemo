@@ -46,8 +46,8 @@ implementation
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Color := clAqua;
-//  Panel1.StyleElements := Panel1.StyleElements - [seClient];
-//  Panel2.StyleElements := Panel2.StyleElements - [seClient];
+  //BluePanel.StyleElements := BluePanel.StyleElements - [seClient];
+  //YellowPanel.StyleElements := YellowPanel.StyleElements - [seClient];
 end;
 
 end.
